@@ -211,6 +211,7 @@ body {
   position: relative;
   margin-top: 100px;
   margin-bottom: 100px;
+  cursor: pointer;
 }
 
 .newbutton:after {
@@ -464,6 +465,12 @@ body {
   width: 400px;
   height: 400px;
   background: #d9d9d9;
+}
+.textimgimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-top: 0;
 }
 
 .textimgtext {
