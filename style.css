@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: courier;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.fundo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #151515;
+  z-index: -11;
+  top: 0;
+  left: 0;
+}
+
+.fundo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  color: #ffffff;
+  position: relative;
+  width: 80vw;
+  height: 90vh;
+  margin-left: 10vw;
+  margin-top: 5vh;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 200px;
+  color: #ffffff;
+}
+
+.alta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration-line: underline;
+  width: 500px;
+  cursor: pointer;
+}
+
+.baixa {
+  position: absolute;
+  bottom: 2vh;
+  right: 0;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.edition {
+  position: absolute;
+  top: 62px;
+  right: 0;
+  width: 10rem;
+  text-align: right;
+}
+
+.author {
+  position: absolute;
+  bottom: 37px;
+  left: 0;
+}
+
+.mapa {
+  width: 500px !important;
+  height: 600px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.containerdesc {
+  margin-top: 44px;
+  height: 700px;
+  background: #e0e261;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  font-size: 32px;
+  width: 80%;
+  text-align: -webkit-center;
+}
+
+.buttonbackground {
+  height: 100vh;
+  background: #151515;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+}
+.buttoncontainer {
+  background: #151515;
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+  align-items: center;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  background: #e0e261;
+  cursor: pointer;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-white {
+  background: white;
+}
+
+.button:hover {
+  transform: rotate(180deg);
+}
+
+.buttontext {
+  text-align: center;
+  height: 55%;
+  color: white;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  width: 90%;
+  align-self: center;
+}
+
+.buttontitle {
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.buttondesc {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+.buttonclicked {
+  height: 125vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollingtext {
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll-text 10s linear infinite;
+  padding-top: 50px;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+.buttonclicked img {
+  padding-top: 150px;
+  width: 90%;
+}
+
+.fontchangingtext {
+  font-size: 30px;
+  width: 50%;
+  display: inline-block;
+  padding-top: 50px;
+  height: 250px;
+}
+
+.textcontainer {
+  width: 90%;
+  height: 500px;
+  text-align: left;
+}
+
+.underfontchangingtext {
+  display: block;
+  padding-top: 50px;
+  font-size: 24px;
+  width: 50%;
+}
+
+.newbuttonclicked {
+  text-align: right;
+  width: 90%;
+  font-size: 28px;
+  position: relative; /* this is needed to position the rectangle */
+}
+
+.newbuttonclicked:after {
+  content: "";
+  position: absolute; /* Add position property */
+  bottom: 0; /* Position the rectangle at the bottom of the text */
+  left: 0; /* Position the rectangle at the left of the text */
+  right: 0; /* Position the rectangle to the right of the text */
+  height: 2px; /* Set the height of the rectangle */
+  background-color: #000; /* Set the color of the rectangle */
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.newbuttonclicked:hover:after {
+  opacity: 1; /* Make the rectangle visible on hover */
+}
