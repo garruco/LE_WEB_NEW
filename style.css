@@ -308,12 +308,12 @@ body {
     text-align: left;
   }
   40% {
-    transform: translateX(0);
-    text-align: right;
+    transform: translateX(85%);
+    text-align: left;
   }
   59% {
-    transform: translateX(0);
-    text-align: right;
+    transform: translateX(85%);
+    text-align: left;
   }
   60% {
     transform: translateX(85%);
@@ -334,19 +334,15 @@ body {
   }
   39% {
     transform: translateX(40%);
-    text-align: center;
   }
   40% {
-    transform: translateX(0);
-    text-align: right;
+    transform: translateX(40%);
   }
   59% {
-    transform: translateX(0);
-    text-align: right;
+    transform: translateX(40%);
   }
   60% {
     transform: translateX(40%);
-    text-align: center;
   }
   90% {
     transform: translateX(0);
@@ -363,19 +359,15 @@ body {
   }
   39% {
     transform: translateX(40%);
-    text-align: center;
   }
   40% {
-    transform: translateX(0%);
-    text-align: right;
+    transform: translateX(40%);
   }
   59% {
-    transform: translateX(0%);
-    text-align: right;
+    transform: translateX(40%);
   }
   60% {
     transform: translateX(40%);
-    text-align: center;
   }
   90% {
     transform: translateX(-25%);
@@ -392,19 +384,15 @@ body {
   }
   39% {
     transform: translateX(-40%);
-    text-align: center;
   }
   40% {
-    transform: translateX(0%);
-    text-align: left;
+    transform: translateX(-40%);
   }
   59% {
-    transform: translateX(0%);
-    text-align: left;
+    transform: translateX(-40%);
   }
   60% {
     transform: translateX(-40%);
-    text-align: center;
   }
   90% {
     transform: translateX(25%);
@@ -421,19 +409,15 @@ body {
   }
   39% {
     transform: translateX(-85%);
-    text-align: right;
   }
   40% {
-    transform: translateX(0);
-    text-align: left;
+    transform: translateX(-85%);
   }
   59% {
-    transform: translateX(0);
-    text-align: left;
+    transform: translateX(-85%);
   }
   60% {
     transform: translateX(-85%);
-    text-align: right;
   }
   90% {
     transform: translateX(0);
