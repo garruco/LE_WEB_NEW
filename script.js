@@ -80,3 +80,33 @@ setInterval(function () {
   text.style.fontFamily = fonts[i];
   i = (i + 1) % fonts.length;
 }, 500);
+
+//fontchangingtext2
+
+let fontIndex = 0;
+const fontStyles = [
+  { fontWeight: "normal", fontStyle: "normal", textDecoration: "none" },
+  { fontWeight: "bold", fontStyle: "normal", textDecoration: "none" },
+  { fontWeight: "normal", fontStyle: "oblique", textDecoration: "none" },
+  { fontWeight: "bold", fontStyle: "oblique", textDecoration: "underline" },
+];
+
+function cycleFontStyles() {
+  const fontchangingtext2 = document.querySelector(".fontchangingtext2");
+  fontchangingtext2.style.fontWeight = fontStyles[fontIndex].fontWeight;
+  fontchangingtext2.style.fontStyle = fontStyles[fontIndex].fontStyle;
+  fontchangingtext2.style.textDecoration = fontStyles[fontIndex].textDecoration;
+  fontIndex = (fontIndex + 1) % fontStyles.length;
+}
+
+setInterval(cycleFontStyles, 150);
+
+//bg
+const newButton = document.querySelector(".newbutton");
+const newButtonClicked = document.querySelector(".newbuttonclicked");
+
+newButton.addEventListener("click", function () {
+  newButtonClicked.style.display = "block";
+  newButton.style.backgroundColor = "#151515";
+  newButton.style.color = "white";
+});

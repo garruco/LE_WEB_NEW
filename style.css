@@ -93,6 +93,8 @@ body {
   font-size: 32px;
   width: 80%;
   text-align: -webkit-center;
+  display: block;
+  text-transform: uppercase;
 }
 
 .buttonbackground {
@@ -136,7 +138,7 @@ body {
   color: white;
   opacity: 0;
   transition: 0.3s ease-in-out;
-  width: 90%;
+  width: 75%;
   align-self: center;
 }
 
@@ -202,14 +204,16 @@ body {
   width: 50%;
 }
 
-.newbuttonclicked {
+.newbutton {
   text-align: right;
   width: 90%;
   font-size: 28px;
-  position: relative; /* this is needed to position the rectangle */
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-.newbuttonclicked:after {
+.newbutton:after {
   content: "";
   position: absolute; /* Add position property */
   bottom: 0; /* Position the rectangle at the bottom of the text */
@@ -221,6 +225,281 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.newbuttonclicked:hover:after {
+.newbutton:hover:after {
   opacity: 1; /* Make the rectangle visible on hover */
+}
+
+.newbuttonclicked {
+  text-align: -webkit-center;
+  display: none;
+}
+
+.newbuttonclicked .desc {
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 50px;
+}
+
+.normaltextcontainer {
+  width: 80%;
+  display: flex;
+  column-gap: 50px;
+  margin-top: 100px;
+}
+
+.text {
+  text-align: justify;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.underlined {
+  text-decoration-line: underline;
+  font-size: 32px;
+}
+
+.desccontainer {
+  width: 100%;
+  background: #151515;
+  color: white;
+  height: 450px;
+}
+
+.movingtext {
+  width: 80%;
+  margin-top: 150px;
+}
+
+.movingtext span {
+  display: block;
+}
+
+.movingtext span.left {
+  text-align: left;
+}
+.movingtext span.right {
+  text-align: right;
+}
+.movingtext span.center {
+  text-align: center;
+}
+.movingtext span.center-left {
+  text-align: center;
+  left: 25%;
+  transform: translateX(-25%);
+}
+.movingtext span.center-right {
+  text-align: center;
+  right: 25%;
+  transform: translateX(25%);
+}
+
+.left {
+  animation: moveRight 5s ease-in-out forwards infinite;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  39% {
+    transform: translateX(85%);
+    text-align: left;
+  }
+  40% {
+    transform: translateX(0);
+    text-align: right;
+  }
+  59% {
+    transform: translateX(0);
+    text-align: right;
+  }
+  60% {
+    transform: translateX(85%);
+    text-align: left;
+  }
+  90% {
+    transform: translateX(0);
+  }
+}
+
+.center {
+  animation: moveCenterRight 5s ease-in-out forwards infinite;
+}
+
+@keyframes moveCenterRight {
+  0% {
+    transform: translateX(0);
+  }
+  39% {
+    transform: translateX(40%);
+    text-align: center;
+  }
+  40% {
+    transform: translateX(0);
+    text-align: right;
+  }
+  59% {
+    transform: translateX(0);
+    text-align: right;
+  }
+  60% {
+    transform: translateX(40%);
+    text-align: center;
+  }
+  90% {
+    transform: translateX(0);
+  }
+}
+
+.center-left {
+  animation: moveCenterLeftRight 5s ease-in-out forwards infinite;
+}
+
+@keyframes moveCenterLeftRight {
+  0% {
+    transform: translateX(-25%);
+  }
+  39% {
+    transform: translateX(40%);
+    text-align: center;
+  }
+  40% {
+    transform: translateX(0%);
+    text-align: right;
+  }
+  59% {
+    transform: translateX(0%);
+    text-align: right;
+  }
+  60% {
+    transform: translateX(40%);
+    text-align: center;
+  }
+  90% {
+    transform: translateX(-25%);
+  }
+}
+
+.center-right {
+  animation: moveCenterRightLeft 5s ease-in-out forwards infinite;
+}
+
+@keyframes moveCenterRightLeft {
+  0% {
+    transform: translateX(25%);
+  }
+  39% {
+    transform: translateX(-40%);
+    text-align: center;
+  }
+  40% {
+    transform: translateX(0%);
+    text-align: left;
+  }
+  59% {
+    transform: translateX(0%);
+    text-align: left;
+  }
+  60% {
+    transform: translateX(-40%);
+    text-align: center;
+  }
+  90% {
+    transform: translateX(25%);
+  }
+}
+
+.right {
+  animation: moveLeft 5s ease-in-out forwards infinite;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  39% {
+    transform: translateX(-85%);
+    text-align: right;
+  }
+  40% {
+    transform: translateX(0);
+    text-align: left;
+  }
+  59% {
+    transform: translateX(0);
+    text-align: left;
+  }
+  60% {
+    transform: translateX(-85%);
+    text-align: right;
+  }
+  90% {
+    transform: translateX(0);
+  }
+}
+
+.movingbg {
+  position: absolute;
+  font-size: 100px;
+  text-transform: uppercase;
+  width: 650px;
+  color: #e0e261;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 100px;
+  opacity: 0; /* initial state */
+  animation: fadeIn 5s ease-in-out infinite; /* animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* start at 0 */
+  }
+  50% {
+    opacity: 1; /* end at 1 */
+  }
+  100% {
+    opacity: 0; /* end at 1 */
+  }
+}
+
+.textimg {
+  display: flex;
+  width: 80%;
+  column-gap: 15%;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.textimgimg {
+  width: 400px;
+  height: 400px;
+  background: #d9d9d9;
+}
+
+.textimgtext {
+  width: 50%;
+  text-align: left;
+  font-size: 24px;
+}
+
+.fontchangingtext2 {
+  font-size: 30px;
+  width: 80%;
+  text-align: right;
+  display: inline-block;
+  padding-top: 50px;
+}
+
+.thirteen {
+  display: block;
+  width: 80%;
+  padding-top: 150px;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
 }
