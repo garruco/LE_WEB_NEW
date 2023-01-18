@@ -497,11 +497,20 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.articlecontainer {
+.articlecontainer1 {
   margin-top: 100px;
   background-color: #151515;
   color: white;
   height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.articlecontainer2 {
+  padding-top: 100px;
+  background-color: #151515;
+  color: white;
+  height: 100vh;
+  width: 100vw;
   position: relative;
 }
 
