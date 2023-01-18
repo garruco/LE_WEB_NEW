@@ -102,11 +102,81 @@ function cycleFontStyles() {
 setInterval(cycleFontStyles, 150);
 
 //bg
-const newButton = document.querySelector(".newbutton");
+const newButtonContainer = document.querySelector(".newbuttoncontainer");
 const newButtonClicked = document.querySelector(".newbuttonclicked");
+var styleElem = document.head.appendChild(document.createElement("style"));
 
-newButton.addEventListener("click", function () {
+newButtonContainer.addEventListener("click", function () {
   newButtonClicked.style.display = "block";
-  newButton.style.backgroundColor = "#151515";
-  newButton.style.color = "white";
+  newButtonContainer.style.backgroundColor = "#151515";
+  newButtonContainer.style.color = "white";
+  styleElem.innerHTML = ".newbutton:after {background: white;}";
 });
+
+//animcoes textos na vertical e diagonal
+function startAnimation() {
+  var animationTexts = document.querySelectorAll(".animationtext");
+  for (var i = 0; i < animationTexts.length; i++) {
+    animationTexts[i].style.visibility = "hidden";
+  }
+
+  var delay = 200;
+  for (var i = 0; i < animationTexts.length; i++) {
+    setTimeout(
+      (function (x) {
+        return function () {
+          animationTexts[x].style.visibility = "visible";
+        };
+      })(i),
+      delay * i
+    );
+  }
+
+  setTimeout(function () {
+    startAnimation();
+  }, (animationTexts.length + 2) * delay);
+}
+
+startAnimation();
+
+function startAnimation2() {
+  var animationTexts = document.querySelectorAll(".animationtext2");
+  for (var i = 0; i < animationTexts.length; i++) {
+    animationTexts[i].style.visibility = "hidden";
+  }
+
+  var delay = 200;
+  for (var i = 0; i < animationTexts.length; i++) {
+    setTimeout(
+      (function (x) {
+        return function () {
+          animationTexts[x].style.visibility = "visible";
+        };
+      })(i),
+      delay * i
+    );
+  }
+
+  setTimeout(function () {
+    startAnimation2();
+  }, (animationTexts.length + 2) * delay);
+}
+
+startAnimation2();
+
+// select the img element
+let arrow = document.querySelector(".articleskip img");
+
+// set a flag to track which image is currently being displayed
+let isArrow1 = true;
+
+// create a function to toggle between the two images
+function toggleArrow() {
+  // change the source of the img element to switch between arrow1.svg and arrow2.svg
+  arrow.src = isArrow1 ? "/img/arrow2.svg" : "/img/arrow1.svg";
+  // toggle the flag
+  isArrow1 = !isArrow1;
+}
+
+// set an interval to call the toggleArrow function every 0.5 seconds
+setInterval(toggleArrow, 500);
