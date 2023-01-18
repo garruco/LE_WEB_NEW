@@ -173,7 +173,7 @@ let isArrow1 = true;
 // create a function to toggle between the two images
 function toggleArrow() {
   // change the source of the img element to switch between arrow1.svg and arrow2.svg
-  arrow.src = isArrow1 ? "/img/arrow2.svg" : "/img/arrow1.svg";
+  arrow.src = isArrow1 ? "img/arrow2.svg" : "img/arrow1.svg";
   // toggle the flag
   isArrow1 = !isArrow1;
 }
