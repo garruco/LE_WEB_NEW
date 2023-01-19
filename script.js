@@ -49,14 +49,21 @@ function changeBackground() {
   var buttonBackground = document.querySelector(".buttonbackground");
   var buttons = document.querySelectorAll(".button");
   const buttonclicked = document.querySelector(".buttonclicked");
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      buttonBackground.style.backgroundColor = "white";
-      buttonBackground.style.height = "100vh";
-      buttonText.style.color = "#151515";
-      buttonclicked.classList.toggle("hidden");
-      clicked = true;
-    });
+  const buttonclicked2 = document.querySelector(".buttonclicked2");
+
+  buttons[0].addEventListener("click", function () {
+    buttonBackground.style.backgroundColor = "white";
+    buttonBackground.style.height = "100vh";
+    buttonText.style.color = "#151515";
+    buttonclicked.classList.toggle("hidden");
+    clicked = true;
+  });
+
+  buttons[1].addEventListener("click", function () {
+    buttonBackground.style.backgroundColor = "white";
+    buttonBackground.style.height = "100vh";
+    buttonText.style.color = "#151515";
+    buttonclicked2.classList.toggle("hidden");
   });
 }
 window.onload = changeBackground;
