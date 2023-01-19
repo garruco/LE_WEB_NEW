@@ -180,3 +180,50 @@ function toggleArrow() {
 
 // set an interval to call the toggleArrow function every 0.5 seconds
 setInterval(toggleArrow, 500);
+
+// select the img element
+let img = document.querySelector(".secondright img");
+
+// set a flag to track which image is currently being displayed
+let isImg1 = true;
+
+// create a function to toggle between the two images
+function toggleImg() {
+  // change the source of the img element to switch between img/article4-2.png and img/article4-2-2.png
+  img.src = isImg1 ? "img/article4-2-2.png" : "img/article4-2.png";
+  // toggle the flag
+  isImg1 = !isImg1;
+}
+
+// set an interval to call the toggleImg function every 0.5 seconds
+setInterval(toggleImg, 500);
+
+//RANDOM TEXT
+// Select the div element
+let randomText = document.querySelector("#random-text");
+
+// Function to generate random letters and spaces
+function generateRandomText() {
+  // String of possible characters to generate
+  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  // String to store the generated text
+  let text = "";
+
+  // Loop to generate a random number of characters
+  for (let i = 0; i < 252; i++) {
+    // Generate a random index within the range of the characters string
+    let index = Math.floor(Math.random() * characters.length);
+    // Add the character at the randomly generated index to the text string
+    text += characters[index];
+    text += "     ";
+  }
+
+  // Insert the generated text into the div element
+  randomText.innerHTML = text;
+}
+
+// Call the generateRandomText function
+generateRandomText();
+
+// Set an interval to call the generateRandomText function every 1000 milliseconds (1 second)
+setInterval(generateRandomText, 1000);
