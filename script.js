@@ -66,7 +66,6 @@ function changeBackground() {
     buttonclicked2.classList.toggle("hidden");
   });
 }
-window.onload = changeBackground;
 
 const image = document.querySelector(".buttonclicked img");
 const originalSrc = image.src;
@@ -234,3 +233,34 @@ generateRandomText();
 
 // Set an interval to call the generateRandomText function every 1000 milliseconds (1 second)
 setInterval(generateRandomText, 1000);
+
+function setMiddleHoverText() {
+  const hover1 = document.querySelector(".hover1");
+  const hover2 = document.querySelector(".hover2");
+  const hover3 = document.querySelector(".hover3");
+  const hover4 = document.querySelector(".hover4");
+  const middleHover = document.querySelector(".middlehover");
+
+  hover1.addEventListener("mouseover", function () {
+    middleHover.innerHTML =
+      "''So I started making scans of the slides and it ended up being the wrong resolution, the wrong cropping''";
+  });
+
+  hover2.addEventListener("mouseover", function () {
+    middleHover.innerHTML = "''full of sh*t, full of the wrong things''";
+  });
+
+  hover3.addEventListener("mouseover", function () {
+    middleHover.innerHTML = "''Let me make a movie out of it,''";
+  });
+
+  hover4.addEventListener("mouseover", function () {
+    middleHover.innerHTML =
+      "''It was exciting. And it was also done with new technology.''";
+  });
+}
+
+window.onload = function () {
+  changeBackground();
+  setMiddleHoverText();
+};
