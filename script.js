@@ -264,3 +264,14 @@ window.onload = function () {
   changeBackground();
   setMiddleHoverText();
 };
+
+const text2_3_1 = document.querySelector(".text2-3-1");
+const text2_3_2 = document.querySelector(".text2-3-2");
+
+text2_3_1.addEventListener("mouseover", () => {
+  text2_3_2.style.display = "block";
+});
+
+text2_3_1.addEventListener("mouseout", () => {
+  text2_3_2.style.display = "none";
+});
