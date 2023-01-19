@@ -203,7 +203,7 @@ function toggleImg() {
 }
 
 // set an interval to call the toggleImg function every 0.5 seconds
-setInterval(toggleImg, 500);
+setInterval(toggleImg, 1000);
 
 //RANDOM TEXT
 // Select the div element
@@ -212,7 +212,8 @@ let randomText = document.querySelector("#random-text");
 // Function to generate random letters and spaces
 function generateRandomText() {
   // String of possible characters to generate
-  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  let characters =
+    "P r i n c e t o nA r c h i t e c t u r a lP r e s si sa b o u tt op u b l i s hac o l l e c t i o no fe s s a y sI' v ew r i t t e n,m a n yo fw h i c hf i r s ta p p e a r e dh e r eo nD e s i g n";
   // String to store the generated text
   let text = "";
 

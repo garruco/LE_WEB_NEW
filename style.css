@@ -714,7 +714,7 @@ body {
   text-align: right;
 }
 .secondright img {
-  width: 475px !important;
+  width: 350px !important;
   padding-top: 0px !important;
 }
 
@@ -845,7 +845,7 @@ body {
 
 .top88 {
   width: 40%;
-  text-align: justify;
+  text-align: left;
   margin-right: auto;
 }
 
@@ -996,13 +996,6 @@ body {
 
 .text2-2-2 {
   font-size: 48px;
-}
-
-.edge {
-  position: absolute;
-  width: 40%;
-  bottom: 225px;
-  left: 250px;
 }
 
 .container2-3 {
