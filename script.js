@@ -64,6 +64,7 @@ function changeBackground() {
     buttonBackground.style.height = "100vh";
     buttonText.style.color = "#151515";
     buttonclicked2.classList.toggle("hidden");
+    clicked = true;
   });
 }
 
